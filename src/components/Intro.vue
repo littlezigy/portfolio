@@ -128,6 +128,11 @@ section#social {
 }
 img#me {
     max-width: 100%;
+    transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 
 section#testimonials {
