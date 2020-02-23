@@ -1,0 +1,17 @@
+body, div, a, img, section, main {
+    box-sizing: border-box;
+}
+
+body  {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.button, button {
+    padding: 0.5em 1em;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+a {
+    text-decoration: none;
+}
