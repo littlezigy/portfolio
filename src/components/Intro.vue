@@ -6,34 +6,16 @@
             <p id = 'name'>I'm Adesuwa</p>
             <p id = 'title'>I am a Fullstack Developer</p>
 
-            <a id = 'contact' href = 'contact' class = button>Contact</a>
+            <a id = 'contact' href = '#contact' class = button>Contact</a>
         </section>
 
-        <img id = 'me' src = "https://res.cloudinary.com/ginani/image/upload/v1582489860/AdesuwaPortfolio/IMG_20191128_093327_uhefwv.jpg"/>
+        <img id = 'me' src = "https://res.cloudinary.com/ginani/image/upload/v1582489860/AdesuwaPortfolio/IMG_20191128_093327_uhefwv.jpg" alt = 'Adesuwa Dawodu'/>
     </div>
 
     <main class = 'page'>
-    <p>I am a fullstack web developer and if I'm not staring into a console, I can be found implementing a UI design to spec</p>
     </main>
 
-    <section id = 'social' class = 'page'>
-        <a href = 'https://github.com/littlezigy'>
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt = 'Github'/>
-        </a>
-        <a href = 'https://linkedin.com/in/adesuwa-dawodu'>
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt = 'LinkedIn'/>
-        </a>
-        <a href = 'https://twitter.com/Zigyzoe'>
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/twitter.svg" alt = 'Twitter'/>
-        </a>
-    </section>
-
-    <section id = 'testimonials'>
-        <p>Testimonials</p>
-        <div class = 'main'>
-        </div>
-    </section>
-</div>
+    </div>
 </template>
 
 <script>
@@ -121,22 +103,21 @@ p#title, p#name, p#hi, a#contact {
 section#social {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
 }
 #social img {
     width: 80px;
     height: 80px;
 }
 img#me {
+    margin-top: 5rem;
     max-width: 100%;
     transform: rotate(180deg);
     -moz-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
-}
-
-section#testimonials {
-    display: none;
 }
 
 @media only screen and (min-width: 1000px) {

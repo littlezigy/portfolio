@@ -6,9 +6,9 @@
     <div @click = 'togglemenu' id = 'burger'>
         <div></div>
     </div>
-    <a class = 'navlinks' href = 'work'>Work</a>
-    <a class = 'navlinks' href = 'about'>About</a>
-    <a class = 'navlinks'>Contact</a>
+    <a class = 'navlinks' href = '#profile'>Work</a>
+    <a class = 'navlinks' href = '#stack'>About</a>
+    <a class = 'navlinks' href = '#contactme'>Contact</a>
     </nav>
 
     <div id = 'menu-overlay'></div>
@@ -18,6 +18,8 @@
     <Profile></Profile>
 
     <Stack></Stack>
+
+    <Contact></Contact>
 
     <footer id = 'about'>
     &copy; 2020. Adesuwa Dawodu
@@ -29,11 +31,12 @@
 import Introduction from './components/Intro.vue';
 import Stack from './components/Stack.vue';
 import Profile from './components/Profile.vue';
+import Contact from './components/Contact.vue';
 
 export default {
   name: 'App',
   components: {
-    Introduction, Stack, Profile
+    Introduction, Stack, Profile, Contact
   },
   data() {
     return {
