@@ -10,7 +10,7 @@ pipelines:
           - npm run build
           - apt-get update
           - apt-get install -y zip
-          - zip -r myportfolio.zip .
+          - zip -r myportfolio.zip appspec.yml dist 
           - pipe: atlassian/aws-code-deploy:0.2.5
             variables:
               AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION
@@ -27,7 +27,7 @@ pipelines:
               AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
               AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
               APPLICATION_NAME: $APPLICATION_NAME
-              DEPLOYMENT_GROUP: $DEPLOYMENT_GROUP
+              DEPLOYMENT_GROUP: Portfolio
               S3_BUCKET: $S3_BUCKET
               COMMAND: 'deploy'
               WAIT: 'true'
