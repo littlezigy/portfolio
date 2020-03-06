@@ -6,7 +6,7 @@
     <div @click = 'togglemenu' id = 'burger'>
         <div></div>
     </div>
-    <a class = 'navlinks' href = '#profile'>Work</a>
+    <a class = 'navlinks' href = '#work'>Work</a>
     <a class = 'navlinks' href = '#stack'>About</a>
     <a class = 'navlinks' href = '#contactme'>Contact</a>
     </nav>
@@ -14,6 +14,8 @@
     <div id = 'menu-overlay'></div>
 
     <Introduction></Introduction>
+
+    <Work></Work>
 
     <Profile></Profile>
 
@@ -32,11 +34,12 @@ import Introduction from './components/Intro.vue';
 import Stack from './components/Stack.vue';
 import Profile from './components/Profile.vue';
 import Contact from './components/Contact.vue';
+import Work from './components/Work.vue';
 
 export default {
   name: 'App',
   components: {
-    Introduction, Stack, Profile, Contact
+    Introduction, Stack, Profile, Contact, Work
   },
   data() {
     return {
@@ -78,6 +81,7 @@ body {
     padding-bottom: 6em;
     position: relative;
     font-size: 1.4rem;
+    color: #1f1e1e;
 }
 img {
     max-width: 100%;
@@ -126,6 +130,11 @@ nav #logo {
 }
 div#menu-overlay {
     display: none;
+}
+@media only screen and (min-width: 731px) {
+    nav div#burger {
+        display: none;
+    }
 }
 @media only screen and (max-width: 730px) {
     div#menu-overlay.show {

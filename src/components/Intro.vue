@@ -113,11 +113,6 @@ section#social {
 img#me {
     margin-top: 5rem;
     max-width: 100%;
-    transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
 }
 
 @media only screen and (min-width: 1000px) {
