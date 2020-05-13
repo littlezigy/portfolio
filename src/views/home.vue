@@ -1,22 +1,15 @@
 <template>
   <div id="app">
-    <nav>
-    <a id = 'logo' href = '/'>Adesuwa</a>
 
-    <div @click = 'togglemenu' id = 'burger'>
-        <div></div>
-    </div>
-    <router-link to = '/resume'>Resume</router-link>
-    <a class = 'navlinks' href = '#work'>Work</a>
-    <a class = 'navlinks' href = '#stack'>About</a>
-    <a class = 'navlinks' href = '#contactme'>Contact</a>
-    </nav>
+    <Introduction></Introduction>
 
-    <div id = 'menu-overlay'></div>
+    <Work></Work>
 
-    <div id = 'page-app-container'>
-        <router-view :key='$route.fullPath' />
-    </div>
+    <Profile></Profile>
+
+    <Stack></Stack>
+
+    <Contact></Contact>
 
     <footer id = 'about'>
     &copy; 2020. Adesuwa Dawodu
@@ -25,8 +18,17 @@
 </template>
 
 <script>
+import Introduction from '../components/Intro.vue';
+import Stack from '../components/Stack.vue';
+import Profile from '../components/Profile.vue';
+import Contact from '../components/Contact.vue';
+import Work from '../components/Work.vue';
+
 export default {
   name: 'App',
+  components: {
+    Introduction, Stack, Profile, Contact, Work
+  },
   data() {
     return {
         menutoggle: 0
@@ -61,7 +63,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 body {
     min-height: 100vh;
     padding-bottom: 6em;
@@ -80,11 +82,7 @@ a#logo {
     color: #009e7b;
 }
 
-div#page-app-container {
-    margin-bottom: 3rem;
-}
 footer {
-    margin-top: 3rem;
     height: 6em;
     background: #c879cb;
     color: white;
